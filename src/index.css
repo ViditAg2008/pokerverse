@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070B0E;
+    color: #F8FAFC;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars for history and chat */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+/* Casino felt radial surface */
+.poker-felt-emerald {
+  background: radial-gradient(ellipse at center, #136B43 0%, #0C4A2E 62%, #072B1A 100%);
+}
+.poker-felt-royal {
+  background: radial-gradient(ellipse at center, #1B4965 0%, #0F2C40 62%, #081824 100%);
+}
+.poker-felt-crimson {
+  background: radial-gradient(ellipse at center, #6B1D28 0%, #451119 62%, #26080D 100%);
+}
+
+/* Wood & Brass table rail */
+.poker-table-rail {
+  background: linear-gradient(145deg, #3A2218 0%, #24130C 50%, #170B06 100%);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.85),
+    inset 0 2px 4px rgba(255, 215, 130, 0.18),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.card-shadow {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
